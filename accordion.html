@@ -43,8 +43,9 @@
     var app = angular.module('myApp', ['ui.bootstrap']);
 
     app.controller("myController", function($scope) {
-      $scope.First = "true";
-      $scope.Second = "";
+      $scope.Second = "true";
+       // Make sure either first or second must be true.
+       // If we declare it as true it will be visible default.
       $scope.value = {
         First: "Some content inside the heading 2",
         Second: "Content inside the heading 2"
