@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title> Angular bootstrap ui</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="angular.js"></script>
+  <script src="ui-bootstrap-tpls-2.3.1.js"></script>
+
+</head>
+<body  ng-app="myApp" ng-controller="myController">
+ <div class="container">
+   <h3 class="text-center"> This is Non-angular Bootstap </h3>
+  <div class="alert alert-success">
+
+    Alert 1
+    <a class="close" > X<a/>
+
+  </div>
+
+ <div class="jumbotron">
+  <section uib-alert  class="alert alert-danger"  data-close="closeAlert($element)" dismiss-on-timeout="1000">Alert 1</section>
+  <section uib-alert  class="alert alert-danger"  close="closeAlert()">Alert 2</section>
+  <section uib-alert  class="alert alert-success" close="closeAlert()">Content</section>
+ <div uib-alert type="info" class="alert alert-info" close="closeAlert()">Content</div>
+ </div>
+</div>
+ {{value}}
+
+
+  <script type="text/javascript">
+  var app = angular.module('myApp', ['ui.bootstrap']);
+
+  app.controller("myController", function($scope) {
+          $scope.btnId= {
+            1 : "11",
+            2 : "2"
+          };
+
+         $scope.closeAlert = function(element) {
+         console.log(element);
+        }
+
+  });
+  </script>
+</body>
+</html>
