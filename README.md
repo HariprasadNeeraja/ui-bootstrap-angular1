@@ -18,9 +18,9 @@ Most of the ui-bootstrap are used as attributes.
    2. we need to declare the call back function .
    3. In bootstrap we need to define our own icon for close. but in angular it was pre-defiend and we can use it for our call back functions.
 
-   * I tried to pass the element id but still it is unsuccessful.
+    <!-- I tried to pass the element id but still it is unsuccessful.
      If you want to pass id we need to use ng-init to declare the id and then we can use it.
-     I don't know why the HTMl-DOM id element is not working.
+     I don't know why the HTMl-DOM "id" element is not working. -->
 
 # Button.html
 
@@ -29,4 +29,11 @@ Most of the ui-bootstrap are used as attributes.
     2. ng-model is by default will be false.
     3. If the value is assigned it is taken.   
 
-    Note:   uib-btn-checkbox is important without this other attributes are useless
+    1. uib-btn-radio is used to pass the radio button value to ng-model
+    2. ng-model is must for all the radio buttons and it should be same.
+    3. ng-model value will get changed for the values present in uib-btn-radio 
+
+
+    Note:     
+    1. uib-btn-checkbox is important without this other attributes are useless
+    2. For all the radio buttons ng-model should be same.        
