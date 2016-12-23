@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,26 +8,30 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="angular.js"></script>
   <script src="ui-bootstrap-tpls-2.3.1.js"></script>
-
 </head>
+
 <body  ng-app="myApp" ng-controller="myController">
+  <input type="button" value="clicke me "class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="100" btn-checkbox-false="200">
 
-  <input type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="100" btn-checkbox-false="200">
-       Single Toggle
+     </input>
    </button>
-   <pre>{{singleModel}}</pre>
-
-   <div class="btn-group">
-
+  <pre>{{singleModel}}</pre>
+  <div class="btn-group">
 
    <input type="checkbox" ng-model="Yes" uib-btn-checkbox> Yes</input> Or
    <input type="checkbox" ng-model="No" uib-btn-checkbox> No</input>
 
    {{Yes}} {{No}}
-   we can also use uib-btn-checkbox-ture or uib-btn-checkbox-false
 
+   <!-- we can also use uib-btn-checkbox-ture or uib-btn-checkbox-false -->
 </div>
 
+<div class="btn-group">
+ <input type="radio"  ng-model="radioModel"  uib-btn-radio="'Left'" ng-click="uncheck()">Left</label>
+ <input type="radio" ng-model="radioModel" uib-btn-radio="'Middle'" ng-click="uncheck()">Middle</label>
+ <input type="radio" ng-model="radioModel" uib-btn-radio="'Right'"ng-click="uncheck()">Right</label>
+   {{radioModel}}
+</div>
 
 
   <script type="text/javascript">
@@ -38,6 +41,12 @@
     $scope.Value = 10;
     $scope.Yes = 100;
     $scope.No = 200;
+    $scope.Left="left";
+   $scope.uncheck = function(event) {
+     console.log(event);
+     console.log($scope.radioModel);
+
+   }
   });
   </script>
 </body>
